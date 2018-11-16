@@ -1,0 +1,57 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /fs03/share/users/antonin.bousquier/home/Vision/TP2/PARTIE4/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec902651057/fast"
+make: AVERTISSEMENT: fichier « Makefile » a une date de modification 0.051 dans le futur
+/usr/bin/make -f CMakeFiles/cmTryCompileExec902651057.dir/build.make CMakeFiles/cmTryCompileExec902651057.dir/build
+make[1]: entrant dans le répertoire « /fs03/share/users/antonin.bousquier/home/Vision/TP2/PARTIE4/build/CMakeFiles/CMakeTmp »
+make[1]: AVERTISSEMENT: fichier « CMakeFiles/cmTryCompileExec902651057.dir/flags.make » a une date de modification 0.035 dans le futur
+/usr/bin/cmake -E cmake_progress_report /fs03/share/users/antonin.bousquier/home/Vision/TP2/PARTIE4/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec902651057.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec902651057.dir/CheckSymbolExists.c.o   -c /fs03/share/users/antonin.bousquier/home/Vision/TP2/PARTIE4/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec902651057
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec902651057.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec902651057.dir/CheckSymbolExists.c.o  -o cmTryCompileExec902651057 -rdynamic 
+CMakeFiles/cmTryCompileExec902651057.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
+CheckSymbolExists.c:(.text+0x16) : référence indéfinie vers « pthread_create »
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec902651057] Erreur 1
+make[1]: quittant le répertoire « /fs03/share/users/antonin.bousquier/home/Vision/TP2/PARTIE4/build/CMakeFiles/CMakeTmp »
+make: *** [cmTryCompileExec902651057/fast] Erreur 2
+
+File /fs03/share/users/antonin.bousquier/home/Vision/TP2/PARTIE4/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /fs03/share/users/antonin.bousquier/home/Vision/TP2/PARTIE4/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3085065945/fast"
+make: AVERTISSEMENT: fichier « Makefile » a une date de modification 0.05 dans le futur
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3085065945.dir/build.make CMakeFiles/cmTryCompileExec3085065945.dir/build
+make[1]: entrant dans le répertoire « /fs03/share/users/antonin.bousquier/home/Vision/TP2/PARTIE4/build/CMakeFiles/CMakeTmp »
+make[1]: AVERTISSEMENT: fichier « CMakeFiles/cmTryCompileExec3085065945.dir/flags.make » a une date de modification 0.035 dans le futur
+/usr/bin/cmake -E cmake_progress_report /fs03/share/users/antonin.bousquier/home/Vision/TP2/PARTIE4/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3085065945.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec3085065945.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3085065945
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3085065945.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec3085065945.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3085065945 -rdynamic -lpthreads 
+/usr/bin/ld : ne peut trouver -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec3085065945] Erreur 1
+make[1]: quittant le répertoire « /fs03/share/users/antonin.bousquier/home/Vision/TP2/PARTIE4/build/CMakeFiles/CMakeTmp »
+make: *** [cmTryCompileExec3085065945/fast] Erreur 2
+
+

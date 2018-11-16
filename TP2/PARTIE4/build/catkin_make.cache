@@ -1,0 +1,2 @@
+cv_camera
+-DCATKIN_DEVEL_PREFIX=/fs03/share/users/antonin.bousquier/home/Vision/TP2/PARTIE4/devel -DCMAKE_INSTALL_PREFIX=/fs03/share/users/antonin.bousquier/home/Vision/TP2/PARTIE4/install -G Unix Makefiles
